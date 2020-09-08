@@ -1,0 +1,32 @@
+#ifndef FENPRINCIPAL_H
+#define FENPRINCIPAL_H
+
+
+#include <QApplication>
+#include <QGroupBox>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QDateEdit>
+#include <QLineEdit>
+#include <QCheckBox>
+#include <QPushButton>
+
+class FenPrincipal: public QWidget
+{
+ public:
+    FenPrincipal();
+    
+
+
+ private:
+    QGroupBox *m_classe;
+    QGroupBox *m_option;
+    QLineEdit *m_edit;
+    QCheckBox *m_commentaire;
+    QVBoxLayout *m_layout;
+    QPushButton *m_bouton1;
+    QPushButton *m_bouton2;
+
+};
+
+#endif // FENPRINCIPAL_H
