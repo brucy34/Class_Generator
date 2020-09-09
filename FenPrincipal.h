@@ -10,28 +10,33 @@
 #include <QLineEdit>
 #include <QCheckBox>
 #include <QPushButton>
+#include <QTextEdit>
+#include <QMessageBox>
 
 class FenPrincipal: public QWidget
 {
+    Q_OBJECT
  public:
     FenPrincipal();
-    QGroupBox *classe =new QGroupBox;
-    QGroupBox *option=new QGroupBox;
-    QLineEdit *edit=new QLineEdit;
-    QCheckBox *commentaire=new QCheckBox;
-    QVBoxLayout *layout=new QVBoxLayout;
-    QPushButton *bouton1=new QPushButton;
-    QPushButton *bouton2=new QPushButton;
-
+    
+private slots:
+    void genererCode();
 
  private:
-    QGroupBox *m_classe;
-    QGroupBox *m_option;
-    QLineEdit *m_edit;
-    QCheckBox *m_commentaire;
-    QVBoxLayout *m_layout;
-    QPushButton *m_bouton1;
-    QPushButton *m_bouton2;
+    QGroupBox *groupeCommentaires;
+    QCheckBox *header;
+    QCheckBox *constructeur;
+    QCheckBox *destructeur;
+    QLineEdit *nom;
+    QLineEdit *parent;
+    QLineEdit *auteur;
+    QDateEdit *date;
+    QTextEdit *role;
+    QPushButton *bouton1;
+    QPushButton *bouton2;
+    QVBoxLayout *layout1;
+    QVBoxLayout *layout2;
+    QVBoxLayout *layout3;
 
 };
 
