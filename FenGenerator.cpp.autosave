@@ -11,7 +11,7 @@ FenGenerator::FenGenerator(QString &code, QWidget *parent=0): QDialog(parent)
 
     fermer=new QPushButton("Fermer");
 
-    QVboxLayout *vbx=new QVBoxLayout;
+    QVBoxLayout *vbx=new QVBoxLayout;
     vbx->addWidget(codeGenere);
     vbx->addWidget(fermer);
 

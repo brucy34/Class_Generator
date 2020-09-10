@@ -1,4 +1,5 @@
 #include "FenPrincipal.h"
+#include "FenGenerator.h"
 
 FenPrincipal::FenPrincipal()
 {
@@ -9,6 +10,7 @@ FenPrincipal::FenPrincipal()
     layout1=new QVBoxLayout;
          layout1->addWidget(nom);
          layout1->addWidget(parent);
+         FenPrincipal().setLayout(layout1);
 
     header=new QCheckBox("Protéger le &header contre les inclusions multiples");
     constructeur=new QCheckBox("Générer un &constructeur par défaut");
@@ -19,6 +21,7 @@ FenPrincipal::FenPrincipal()
          layout2->addWidget(header);
          layout2->addWidget(constructeur);
          layout2->addWidget(destructeur);
+         FenPrincipal().setLayout(layout2);
 
 
     groupeCommentaires=new QGroupBox("Ajouter des commentaires");
@@ -32,6 +35,7 @@ FenPrincipal::FenPrincipal()
          layout3->addWidget(auteur);
          layout3->addWidget(date);
          layout3->addWidget(role);
+         FenPrincipal().setLayout(layout3);
 
      bouton1=new QPushButton("Quitter");
      bouton2=new QPushButton("Générer");
@@ -51,6 +55,14 @@ void FenPrincipal::genererCode()
     }
     else
     {
-       QString code;
+       QString code="/*"
+                    "Auteur : "; auteur ;
+                    "Date de création : "; date;
+                    "Role :"; role;
+                    "*/";
+
+         FenGenerator *fenetreCode=new FenGenerator (code,this);
+         fenetreCode->exec();
+
     }
 }

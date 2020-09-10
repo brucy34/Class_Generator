@@ -3,14 +3,19 @@
 
 #include <QApplication>
 #include <QDialog>
+#include <QTextEdit>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 class FenGenerator: public QDialog
 {
 public:
-    FenGenerator();
+    FenGenerator(QString &code,QWidget *parent);
 
 
 private:
+    QTextEdit *codeGenere;
+    QPushButton *fermer;
 };
 
 #endif // FENGENERATOR_H
