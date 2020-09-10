@@ -24,6 +24,7 @@ private slots:
     void genererCode();
 
  private:
+    QGroupBox *groupeCommentaires;
     QCheckBox *header;
     QCheckBox *constructeur;
     QCheckBox *destructeur;
